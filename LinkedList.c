@@ -36,11 +36,11 @@ Node* SLL_GetNodeAt(Node* head, int location) {
 }
 
 void SLL_DeleteNode(Node** head, Node* remove) {
-    if(head == remove){
+    if(*head == remove){
         *head = remove->nextNode;
     }
     else{
-        Node* cur = head;
+        Node* cur = *head;
         while(cur == remove){
             cur = cur->nextNode;
         }

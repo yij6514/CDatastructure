@@ -13,15 +13,15 @@ int main() {
     }
 
     newNode = SLL_CreateNode(-1);
-    SLL_InsertNode(&list, newNode);
+    SLL_InsertNode(list, newNode);
 
     newNode = SLL_CreateNode(-2);
-    SLL_InsertNode(&list, newNode);
+    SLL_InsertNode(list, newNode);
 
     count = SLL_GetNodeCount(list);
     for(i = 0; i < count; i++) {
         cur = SLL_GetNodeAt(list, i);
-        printf("List[%d] : %d", i, cur->data);
+        printf("List[%d] : %d\n", i, cur->data);
     }
 
     printf("\nInserting 3000 After [2]......\n\n");
@@ -34,7 +34,7 @@ int main() {
     count = SLL_GetNodeCount(list);
     for(i = 0; i < count; i++) {
         cur = SLL_GetNodeAt(list, i);
-        printf("List[%d] : %d", i, cur->data);
+        printf("List[%d] : %d\n", i, cur->data);
     }
 
     printf("\nDestroying List...\n");
