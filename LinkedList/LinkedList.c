@@ -29,7 +29,7 @@ void SLL_AppendNode(Node** head, Node* newNode) {
 Node* SLL_GetNodeAt(Node* head, int location) {
     Node* cur = head;
     while(cur != NULL && (--location) >= 0) {
-        cur =cur->nextNode;
+        cur = cur->nextNode;
     }
 
     return cur;
@@ -75,5 +75,20 @@ void SLL_InsertNewHead(Node** head, Node* newHead) {
     else {
         newHead->nextNode = (*head);
         (*head) = newHead;
+    }
+}
+
+void SLL_InsertNodeBefore(Node** head, Node* cur, Node* newHead) {
+
+}
+
+void SLL_DestroyALLNodes(Node** list) {
+    Node* cur = *list;
+    while(*list != NULL) {
+        cur = *list;
+        while(cur != NULL) {
+            cur = cur->nextNode;
+        }
+        
     }
 }
